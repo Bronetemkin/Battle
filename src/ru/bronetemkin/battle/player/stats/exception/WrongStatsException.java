@@ -1,4 +1,4 @@
-package ru.bronetemkin.battle.exception;
+package ru.bronetemkin.battle.player.stats.exception;
 
 /**
  * Created by bronetemkin on 26.09.16.

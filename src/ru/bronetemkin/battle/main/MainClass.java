@@ -1,6 +1,6 @@
 package ru.bronetemkin.battle.main;
 
-import ru.bronetemkin.battle.player.StatsFactory;
+import ru.bronetemkin.battle.player.stats.StatsFactory;
 
 /**
  * Created by Bronetemkin on 26.09.2016.

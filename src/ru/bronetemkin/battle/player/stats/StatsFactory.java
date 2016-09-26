@@ -1,6 +1,6 @@
-package ru.bronetemkin.battle.player;
+package ru.bronetemkin.battle.player.stats;
 
-import ru.bronetemkin.battle.exception.WrongStatsException;
+import ru.bronetemkin.battle.player.stats.exception.WrongStatsException;
 
 import java.util.Random;
 
