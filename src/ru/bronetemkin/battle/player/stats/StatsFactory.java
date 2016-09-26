@@ -24,7 +24,6 @@ public class StatsFactory {
     }
 
     private static Stats generateStats(){
-        log("generateStats");
         byte sum = 0, endurance, power, agility;
         Random random = new Random(System.currentTimeMillis());
         endurance = (byte) (random.nextInt(Stats.MAX_CHAR_VALUE) + Stats.MIN_CHAR_VALUE);
@@ -95,9 +94,5 @@ public class StatsFactory {
         public float getAgility(){
             return agility / STATS_MODIFIER;
         }
-    }
-
-    private static void log(String msg){
-        System.out.println(msg);
     }
 }
