@@ -55,12 +55,16 @@ public class StatsFactory {
         public static final byte DEFAULT_HEALTH_LEVEL = 100;
         public static final byte STATS_MODIFIER = 2;
 
-        private byte health = DEFAULT_HEALTH_LEVEL, endurance, power, agility;
+        private byte maxHealthLevel = DEFAULT_HEALTH_LEVEL,  maxEnduranceLevel, power, agility;
+        private byte health, endurance;
 
         private Stats(byte endurance, byte power, byte agility){
-            this.endurance = endurance;
+            this.maxEnduranceLevel = endurance;
             this.power = power;
             this.agility = agility;
+
+            this.health = maxHealthLevel;
+            this.endurance = maxEnduranceLevel;
         }
 
         private byte getByteHealthValue(){
@@ -77,6 +81,24 @@ public class StatsFactory {
 
         private byte getByteAgilityValue(){
             return agility;
+        }
+
+        public void decreaseHealthLevel(byte level){
+            if((health - level) >= 0){
+                health -= level;
+            }
+        }
+
+        public void increaseEnduranceLevel(byte level){
+            if((endurance + level) <= maxEnduranceLevel){
+                endurance += level;
+            }
+        }
+
+        public void decreaseEnduranceLevel(byte level){
+            if((endurance - level) >= 0){
+                endurance -= level;
+            }
         }
 
         public float getHealth(){
