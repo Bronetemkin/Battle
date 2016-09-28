@@ -11,6 +11,17 @@ public class Player {
     private StatusListener statusListener;
     private StatsFactory.Stats stats;
     private int status;
+    private String name;
+
+    public void setName(String name){
+        if(name != null && !name.isEmpty() && !name.equals("")){
+            this.name = name;
+        }
+    }
+
+    public String getName(){
+        return name;
+    }
 
     public void setStats(StatsFactory.Stats stats){
         this.stats = stats;
