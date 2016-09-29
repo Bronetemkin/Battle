@@ -49,6 +49,7 @@ public class Player {
         setStatus(status);
         if(statusListener != null){
             statusListener.onStatusChanged(status, null);
+
         }
     }
 
